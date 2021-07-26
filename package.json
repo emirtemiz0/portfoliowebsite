@@ -6,10 +6,7 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build",
-    "start": "sanity start",
-    "test": "sanity check",
-    "build": "sanity build public -y"
+    "build": "next build"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
