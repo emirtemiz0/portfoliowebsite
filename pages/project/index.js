@@ -1,20 +1,16 @@
 import React, { useState } from 'react'
 import sanityClient from '../../sanity'
 import Link from 'next/link'
-import Head from 'next/head'
+import Script from 'next/script'
 import SanityBlockContent from '@sanity/block-content-to-react'
 
 const Project = ({ projects }) => {
   return (
     <main className='blog-main'>
-      <Head>
-        <title>emirtemiz</title>
-        <meta name='description' content='Portfolio website' />
-        <script type='text/javascript' src='js/winbox.bundle.js'></script>
-      </Head>
-      <section className='post-section'>
+    <Script src='js/winbox.bundle.js'></Script>
+    <section className='post-section'>
         <h1>
-          <Link href='/'>emirtemiz</Link>
+          <Link href='/' rel="noreferrer">emirtemiz</Link>
           <span className='cursor'>|</span>projects
         </h1>
         <h3>Recent projects</h3>
@@ -22,7 +18,7 @@ const Project = ({ projects }) => {
           {projects &&
             projects.map((project) => (
               <article key={project.title}>
-                <a href={project.link} target='_blank'>
+                <a href={project.link} target='_blank' rel="noreferrer">
                   <span style={{ cursor: 'pointer' }} className='post-body'>
                     <p>{project.description}</p>
                     <span className='post-info'>

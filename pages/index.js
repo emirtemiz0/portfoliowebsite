@@ -15,9 +15,7 @@ const Home = () => {
 
   return (
     <div>
-      <Head>
-      <script type='text/javascript' src='js/winbox.bundle.js'/>
-      </Head>
+      <Script src='js/winbox.bundle.js'></Script>
       <div className="container">
         <nav>
           <ul>
@@ -55,12 +53,12 @@ const Home = () => {
             })
           }}>/contact</li>
           <li>
-            <Link href='/blog'>
+            <Link href='/blog' rel="noopener noreferrer">
             /blog
             </Link>
           </li>
           <li>
-          <Link href='/project'>
+          <Link href='/project' rel="noopener noreferrer">
             /project
             </Link>
           </li>
@@ -71,22 +69,22 @@ const Home = () => {
           <h1>emirtemiz:$<span className="cursor">|</span></h1>
           <ul>
             <li>
-              <Link href="/">
+              <Link href="/" rel="noopener noreferrer">
               Yotube
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/" rel="noopener noreferrer">
               LinkedIn
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/" rel="noopener noreferrer">
               Github
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/" rel="noopener noreferrer">
               Instagram
               </Link>
             </li>

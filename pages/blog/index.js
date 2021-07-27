@@ -4,6 +4,7 @@ import Head from 'next/head'
 import SanityBlockContent from '@sanity/block-content-to-react'
 import Link from 'next/link'
 import Script from 'next/script'
+import Image from 'next/image'
 
 const Blog = ({posts}) => {
   const [blockContent ,setBlockContent] = useState()
@@ -20,13 +21,11 @@ const Blog = ({posts}) => {
   }
 
     return (
-      <main className='blog-main'>
-      <Head>
-        <script type='text/javascript' src='js/winbox.bundle.js'/>  
-      </Head>
+      <main className='blog-main'>     
+      <Script src='js/winbox.bundle.js'></Script>  
       <section className='post-section'>
         <h1>
-          <Link href='/'>emirtemiz</Link>
+          <Link href='/' rel="noopener noreferrer">emirtemiz</Link>
           <span className='cursor'>|</span>blog
         </h1>
         <h3>Recent posts</h3>
@@ -50,10 +49,6 @@ const Blog = ({posts}) => {
                   }}
                   className='post-body'
                 >
-                  <img
-                    src={post.mainImage.asset.url}
-                    alt={post.mainImage.alt}
-                  ></img>
                   <span className='post-info'>
                     <h3 className='post-category'>
                       {post.categories ? post.categories[0] : 'No category'}
