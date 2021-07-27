@@ -3,6 +3,7 @@ import sanityClient from '../../sanity'
 import Head from 'next/head'
 import SanityBlockContent from '@sanity/block-content-to-react'
 import Link from 'next/link'
+import Script from 'next/script'
 
 const Blog = ({posts}) => {
   const [blockContent ,setBlockContent] = useState()
@@ -21,9 +22,7 @@ const Blog = ({posts}) => {
     return (
       <main className='blog-main'>
       <Head>
-        <title>emirtemiz</title>
-        <meta name='description' content='Portfolio website' />
-        <script type='text/javascript' src='js/winbox.bundle.js'></script>
+        <script type='text/javascript' src='js/winbox.bundle.js'/>  
       </Head>
       <section className='post-section'>
         <h1>

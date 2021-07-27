@@ -1,12 +1,14 @@
 import React, {useEffect} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Script from 'next/script'
+
 
 const Home = () => {
   var aboutContent = null
   var contactContent = null
 
-  useEffect(() => { 
+  useEffect(() => {
     contactContent = document.querySelector('#contact-content')
     aboutContent = document.querySelector('#about-content')
   }, [])
@@ -14,9 +16,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Emirtemiz</title>
-        <meta name='description' content='Emirtemiz Website'/>
-        <script type='text/javascript' src='js/winbox.bundle.js'></script>
+      <script type='text/javascript' src='js/winbox.bundle.js'/>
       </Head>
       <div className="container">
         <nav>
@@ -71,16 +71,24 @@ const Home = () => {
           <h1>emirtemiz:$<span className="cursor">|</span></h1>
           <ul>
             <li>
-              <a href="/">Youtube</a>
+              <Link href="/">
+              Yotube
+              </Link>
             </li>
             <li>
-              <a href="/">Github</a>
+              <Link href="/">
+              LinkedIn
+              </Link>
             </li>
             <li>
-              <a href="/">LinkedIn</a>
+              <Link href="/">
+              Github
+              </Link>
             </li>
             <li>
-              <a href="/">İnstagram</a>
+              <Link href="/">
+              Instagram
+              </Link>
             </li>
           </ul>
         </main>
